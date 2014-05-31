@@ -1,4 +1,4 @@
-# CORE INTRO TO Rails
+# INTRO TO RAILS
 This is an Intro to Rails course, intended for eventual inclusion in the Girl Develop It Core Curriculum. All material by Cheri Allen, inspired by Railsbridge.
 
 The course is meant to be taught in four two-hour workshops. Each of the slides and practice files are customizable according to the needs of a given class or audience.
