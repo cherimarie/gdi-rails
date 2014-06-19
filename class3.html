@@ -44,7 +44,7 @@
           <p>slides: http://cherimarie.github.io/gdi-rails</p>
         </section>
         
-        <!-- Welcome-->
+  <!-- Intro -->
         <section>
           <h3>Welcome!</h3>
           <div class = "left-align">
@@ -62,9 +62,148 @@
         <section>
           <h3>What we will cover today</h3>
           <ul>
-            <li></li>
+            <li>Homework Review</li>
+            <li>Controllers</li>
+            <li>Routes</li>
+            <li>Views</li>
           </ul>
         </section>
+
+        <section>
+          <h3>Homework Review</h3>
+          <h5>Rails Console</h5>
+          <p>Questions?</p>
+        </section>
+
+        <section>
+          <h3>Controllers & Views</h3>
+          <p>Action View and Action Controller are the two major components of Action Pack. In Rails, web requests are handled by Action Pack, which splits the work into a controller part (performing the logic) and a view part (rendering a template). Typically, Action Controller will be concerned with communicating with the database and performing CRUD actions where necessary. Action View is then responsible for compiling the response.</p>
+        </section>
+
+  <!-- Controllers -->
+        <section>
+          <h3>What is a controller?</h3>
+          <p>After routing has determined which controller to use for a request, your controller is responsible for making sense of the request and producing the appropriate output (action and view).</p>
+          <p><a href="http://guides.rubyonrails.org/action_controller_overview.html" alt="rails guides controllers">More info...</a></p>
+        </section>
+
+        <section>
+          <h3>BestSong Controllers</h3>
+          <br>
+          <table>
+            <tr>
+                <th style="border-bottom: 2px solid skyblue;">Controller</th>
+                <th colspan="3" style="border-bottom: 2px solid skyblue;">Actions</th>
+            </tr>
+            <tr>
+                <td>Artists</td>
+                <td>Index</td>
+                <td>Show</td>
+            </tr>
+            <tr>
+                <td>Songs</td>               
+                <td>New</td>
+                <td>Create</td>
+                <td>Show</td>
+            </tr>
+            <tr>
+                <td>Ratings</td>
+                <td>New</td>
+                <td>Create</td>
+            </tr>
+          </table>
+        </section>
+
+<!-- Instructor leads class in building Artist, Song, & Rating controllers -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p>Build your own Rating#new controller method.</p>
+        </section>
+
+        <section>
+          <h3>Let's Develop It!</h3>
+          <pre><code class="ruby">
+def new
+  @rating = Rating.new
+  @song = Song.find(params[:song_id])
+  @artist = Artist.find(params[:artist_id])
+end 
+          </code></pre>
+        </section>
+
+  <!-- Routing -->
+        <section>
+          <h3>Routing</h3>
+          <p>The Rails router recognizes URLs and dispatches them to a controller's action. It can also generate paths and URLs, avoiding the need to hardcode strings in your views.</p>
+          <p>Since ratings belong to songs, and songs belong to artists, we need nested routes.</p>
+          <p><a href="http://guides.rubyonrails.org/routing.html" alt="rails guides routing">More info...</a></p>
+        </section>
+
+<!-- Views -->
+        <section>
+          <h3>What is a View</h3>
+          <p>Action View templates are written using embedded Ruby in tags mingled with HTML. To avoid cluttering the templates with boilerplate code, a number of helper classes provide common behavior for forms, dates, and strings. It's also easy to add new helpers to your application as it evolves.</p>
+          <ul>
+            <li>Layouts</li>
+            <li>Templates</li>
+            <li>Partials</li>
+          </ul>
+          <p><a href="http://guides.rubyonrails.org/layouts_and_rendering.html" alt="rails guides views">More info...</a></p>
+        </section>
+
+        <section>
+          <h3>BestSong Views</h3>
+          <ul>
+            <li style="border-bottom: 2px solid skyblue;">Model/View</li>
+            <li>Layouts/Application</li>
+            <li>Artist/Index (root)</li>
+            <li>Artist/Show</li>
+            <li>Song/Show</li>
+            <li>Song/New</li>
+            <li>Song/_form</li>
+            <li>Rating/New</li>
+            <li>Rating/_form</li>
+          </ul>
+        </section>
+
+<!-- Instructor leads class in building views for app -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p>Build your own Song/Show view</p>
+        </section>
+
+        <section>
+          <h3>Let's Develop It!</h3>
+          <pre><code class="html">
+&lt;h1><%= @song.title %>&lt;/h1>
+
+<p><%= @song.length %> minutes of awesome! Best played at <%= @song.optimal_volume %>. Rated as <%= @song.average_rating %> by people who would know.</p> 
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Where Does CSS Go?</h3>
+          <p>Assets!</p>
+        </section>
+
+        <section>
+          <h3>Summary</h3>
+          <p>Today, we built the controllers and views for our application, including forms to create new songs and ratins, as well as all the necessary routing.</p>
+
+          <p>App code available <a href="https://github.com/cherimarie/bestsong" alt="github repo">on Github</a>.</p>
+        </section>
+
+        <section>
+          <h3>Questions</h3>
+          <p>?</p>
+        </section>
+        
+        <section>
+          <h3>Homework</h3>
+          <p>Ensure that you have an account wet up on Heroku.com.</p>
+          <p>Read the documentation for the <a href="https://github.com/plataformatec/devise" alt="Devise gem">Devise gem</a>. We'll be using it next week.</p>
+        </section>
+
 
        
       </div>
