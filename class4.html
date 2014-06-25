@@ -62,13 +62,109 @@
         <section>
           <h3>What we will cover today</h3>
           <ul>
-            <li>Homework Review</li>
             <li>User Authentication with Devise Gem</li>
             <li>Deploying to Heroku</li>
             <li>Seed Data (time permitting)</li>
           </ul>
         </section>
 
+        <section>
+          <h3>Devise</h3>
+          <p><a href="https://github.com/plataformatec/devise" alt="Devise gem">Devise documentation</a></p>
+          <p>We are going to follow the documentation's instructions, as it is well maintained and accurate.</p>
+        </section>
+
+        <section>
+          <h3>Devise</h3>
+          <p>As of this writing, the steps for Devise setup are:</p>
+          <ol>
+            <li>Add Devise to Gemfile</li>
+            <li>Bundle Install</li>
+            <li>Run Devise generator</li>
+            <li>Do the things suggested in setup message</li>
+            <li>Generate devise User model</li>
+            <li>Run 'rake db:migrate'</li>
+            <li>Create sign up/in/out links in application.html.erb</li>
+            <li>Add before filter for protected actions in a controller</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Heroku</h3>
+          <p>Tool check!</p>
+          <pre><code class="command-line">
+$ heroku --help
+$ git --help             
+          </code></pre>
+          <p>If you don't get help menus back, get a TA to help you install Heroku and Git correctly.</p>
+        </section>
+
+<!-- BREAK --> 
+        <section>
+          <h3>Heroku</h3>
+          <p>Let's follow <a href="http://curriculum.railsbridge.org/intro-to-rails/deploying_to_heroku" alt="Railsbridge deploy to heroku instructions">Railsbridge's instructions</a>.</p>
+          <p>There is one correction- step 4 on the next slide.</p>
+
+        </section>
+
+        <section>
+          <h3>Heroku</h3>
+          <p>As of this writing, these are the steps to deploy to Heroku:</p>
+          <ol>
+            <li>Create Heroku app in command line</li>
+            <li>Edit the Gemfile to add Postgres to appropriate groups</li>
+            <li>Apply the Gemfile changes</li>
+            <li>Change the production group in config/database.yml to:
+            <pre><code class="ruby">
+production:
+  adapter: postgresql
+  database: db/production            
+          </code></pre></li>
+            <li>Add and commit changes with Git</li>
+            <li>Push to heroku</li>
+            <li>Run database migrations and seed data in terminal</li>
+            <li>Visit application, be super proud!</li>
+          </ol>
+        </section>
+
+
+        <section>
+          <h3>Seeds</h3>
+          <p>In db/seeds.rb, you can write code that will populate the database. Syntax is exactly like the Rails Console, so it should look familiar to you.</p>
+          <p>Whenever the app is setup on a new machine (your collaborator's, Heroku's servers, etc), 'rake db:seed' can be run, and the database will be populated with the data from seed file. Sweet!</p>
+        </section>
+
+        <section>
+          <h3>Seeds</h3>
+          <p>In my db/seeds.rb file, I added this: </p>
+          <pre><code class="ruby">
+Artist.create(name: "Shonen Knife", hometown: "Osaka")
+Artist.create(name: "Shakira", hometown: "Barranquilla")
+Artist.create(name: "Beyonce", hometown: "Houston")
+Artist.create(name: "Teagan and Sara", hometown: "Calgary")
+        </code></pre>
+        </section>
+
+        <section>
+          <h3>Seeds</h3>
+          <p>After saving db/seeds.rb, in the terminal run:</p>
+          <pre><code class="command-line">
+$ rake db:seed
+          </code></pre>
+          <p>After pushing your changes to Heroku, in the terminal run:</p>
+          <pre><code class="command-line">
+$ heroku run rake db:seed
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Questions</h3>
+        </section>
+
+        <section>
+          <h3>Further Resources</h3>
+        </section>
+                                                      
        
       </div>
       <footer>
