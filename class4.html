@@ -35,7 +35,7 @@
 
     <div class="reveal">
 
-      <!-- Any section element inside of this container is displayed as a slide -->
+      <!-- All of this class' project activity can be seen in the commits from June 24, 2014 here: https://github.com/cherimarie/worstsong/commits/master -->
       <div class="slides">
         <!-- Opening slide -->
         <section>
@@ -69,6 +69,15 @@
         </section>
 
         <section>
+          <h3>Gems</h3>
+          <p><strong>Gems</strong> are ruby libraries or programs. They're simultaneously the best and worst thing about Rails.</p>
+          <p>You can add all sorts of amazing functionality to your app with very little effort via a gem, but then you have to deal with versioning and conflicts between gems.</p>
+          <p>Gems are specified in your app's Gemfile. Running 'bundle install' ensures you have all gems available locally, and updates your Gemfile.lock file.</p>
+          <p>It is very common to break up your Gemfile into groups that correspond to Rails environments: test, development, production.</p>
+        </section>
+
+<!-- Instructor and students work together through installing and using Devise, including discussion of Gems/Gemfile, Bundler, reading documentation, appraising quality of a gem, link_to in ERB, and before filters. Approx 60 minutes.-->
+        <section>
           <h3>Devise</h3>
           <p><a href="https://github.com/plataformatec/devise" alt="Devise gem">Devise documentation</a></p>
           <p>We are going to follow the documentation's instructions, as it is well maintained and accurate.</p>
@@ -99,14 +108,14 @@ $ git --help
           <p>If you don't get help menus back, get a TA to help you install Heroku and Git correctly.</p>
         </section>
 
-<!-- BREAK --> 
+<!-- BREAK and time for anyone lacking tools to catch up --> 
         <section>
           <h3>Heroku</h3>
           <p>Let's follow <a href="http://curriculum.railsbridge.org/intro-to-rails/deploying_to_heroku" alt="Railsbridge deploy to heroku instructions">Railsbridge's instructions</a>.</p>
           <p>There is one correction- step 4 on the next slide.</p>
-
         </section>
 
+<!-- Instructor leads students in the steps necessary to deploy an app to Heroku, including discussion on different databases, groups in Gemfile, database configuration, the Heroku command line tools. Approx 25 minutes. --> 
         <section>
           <h3>Heroku</h3>
           <p>As of this writing, these are the steps to deploy to Heroku:</p>
@@ -127,7 +136,7 @@ production:
           </ol>
         </section>
 
-
+<!-- Seeds. Approx 15 minutes. --> 
         <section>
           <h3>Seeds</h3>
           <p>In db/seeds.rb, you can write code that will populate the database. Syntax is exactly like the Rails Console, so it should look familiar to you.</p>
@@ -157,12 +166,51 @@ $ heroku run rake db:seed
           </code></pre>
         </section>
 
+<!-- Questions/resources for further learning. Approx 10 mins. -->
         <section>
           <h3>Questions</h3>
+          <img src="questioncat.jpg" />
         </section>
 
-        <section>
+        <section> 
           <h3>Further Resources</h3>
+            <table style="font-size: 24px; line-height: 1.5em;">
+              <tr>
+                <td><a href="http://www.ruby-doc.org/">Ruby-doc.org</a></td>
+                <td>Official Ruby documentation</td>
+              </tr>
+              <tr>
+                <td><a href="http://guides.rubyonrails.org/">Ruby on Rails Guides</a></td>
+                <td>Excellent documentation for Rails</td>
+              </tr>
+              <tr>
+                <td><a href="http://railscasts.com/">Rails Casts</a></td>
+                <td>Screencasts on how to do almost everything with Rails</td>
+              </tr>
+              <tr>
+                <td><a href="http://ruby.railstutorial.org/">The Rails Tutorial</a></td>
+                <td>Great free (HTML version) book with step-by-step instructions on building Rails apps</td>
+              </tr>
+              <tr>
+                <td><a href="http://rubygems.org/">RubyGems.org</a></td>
+                <td>Listing of all available Gems</td>
+              </tr>
+              <tr>
+                <td><a href="http://ruby.learncodethehardway.org/">Ruby the Hard Way</a></td>
+                <td>Fun, free (HTML version) book with great information about programming</td>
+              </tr>
+              <tr>
+                <td><a href="http://girldevelopit.com/">Girl Develop It</a></td>
+                <td>Local workshops, events, and coding sessions with awesome people &lt;3</td>
+              </tr>
+            </table>
+          </section>
+
+        <section>
+          <h3>Stay in Touch!</h3>
+          <p>Cheri Allen</p>
+          <p>cherimarie@gmail.com</p>
+          <p>dinosaurparty.info</p>
         </section>
                                                       
        
