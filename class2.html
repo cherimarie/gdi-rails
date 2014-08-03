@@ -105,6 +105,7 @@
         <section>
           <h3>Best Song App User Stories</h3>
           <p>????</p>
+          <!-- 10 minute discussion, list student suggestions on whiteboard if possible -->
         </section>
 
         <section>
@@ -117,10 +118,12 @@
           </ul>
           <br><br>
           <p>What do we need?</p>
+          <!-- 10 minute discussion, write out requirements on a whiteboard if possible -->
         </section>
 
         <section>
           <h3>Let's Build an App!</h3>
+          <!-- Change these models, etc. to reflect your class' requirements-->
           <h4>Generating Models</h4>
           <pre><code class="command-line">
 $ rails generate model Artist full_name:string 
@@ -165,10 +168,11 @@ $ rake db:migrate
 
         <section>
           <h3>Migrations</h3>
-          <p>It would be pretty cool if songs has an attribute called 'optimal volume'. Let's create a migration to add that to the table.</p>
+          <p>It would be pretty cool if songs has an attribute called 'optimal volume'. Let's create a migration to add that to the table. Run this in the terminal:</p>
           <pre><code class="command-line">
 $ rails generate migration AddOptimalVolumetoSongs
           </code></pre>
+          <p>And this will be the migration file it generates, with your additions:</p>
           <pre><code class="ruby">
 class AddOptimalVolumetoSongs &lt; ActiveRecord::Migration
   def change
@@ -176,7 +180,7 @@ class AddOptimalVolumetoSongs &lt; ActiveRecord::Migration
   end
 end
           </code></pre>
-          <p>Sweet. Now run the migration so the schema is up to date.</p>
+          <p>Sweet. Now run the migration ('rake db:migrate') so the schema is up to date.</p>
         </section>
 
         <section>

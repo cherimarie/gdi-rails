@@ -161,7 +161,7 @@ $ rails console
         <section>
         <h3>Rails Console</h3>
         <div class="smalltext">
-        <p>The Rails console is like IRB with your Rails app loaded in. Sweet!<p>
+        <p>The Rails console is like IRB with your Rails app loaded in. Rad!<p>
         <p>CRUD Operations:</p></div>
         <pre><code class="command-line">
 #Create
@@ -169,7 +169,7 @@ $ rails console
 > Student.create(full_name: "Bert", bio: "Bestie of Ernie")
 #Read
 > Student.all
-> student1 = Student.first
+> Student.first
 > student = Student.find(1) 
 #Update
 > student.update_attributes(full_name: "Bert Bernard")
@@ -255,9 +255,9 @@ end           </code></pre>
         <section>
           <h3>Step 5</h3>
           <h4>Add routes for Student views</h4>
-          <p>In your text editor, open config/routes, and create resource routes for our student controller:</p>
+          <p>In your text editor, open config/routes.rb, and create resource routes for our student controller:</p>
           <pre><code class="ruby"> 
-resources :products
+resources :students
           </code></pre>
         </section>
 

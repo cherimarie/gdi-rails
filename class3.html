@@ -114,15 +114,27 @@
           </table>
         </section>
 
-<!-- Instructor leads class in building Artist, Song, & Rating controllers -->
+        <section>
+          <h3>Building Controllers</h3>
+          <p>Let's work together to build the Artists, Songs, and Ratings controllers. Start with running the generate commands in the terminal: </p>
+          <pre><code>
+$ rails generate controller Artists 
+$ rails generate controller Songs
+$ rails generate controller Ratings            
+          </code></pre>
+        </section>
+<!-- Instructor leads class in building Artists, Songs, & Ratings controllers, with the actions listed in the previous section. Leave Ratings#new for the section below. -->
+
         <section>
           <h3>Let's Develop It!</h3>
-          <p>Build your own Rating#new controller method.</p>
+          <p>Build your own Rating#new controller method. It will need to create a new Rating and assign it to an instance variable, then find the song and artist by params, and assign them to instance variables. </p>
         </section>
 
         <section>
           <h3>Let's Develop It!</h3>
           <pre><code class="ruby">
+# in app/controllers/ratings_controller.rb
+
 def new
   @rating = Rating.new
   @song = Song.find(params[:song_id])
@@ -166,7 +178,12 @@ end
           </ul>
         </section>
 
-<!-- Instructor leads class in building views for app -->
+        <section>
+          <h3>Building Views</h3>
+          <p>Let's work together to build the Artists, Songs, and Ratings views.</p>
+        </section>
+
+<!-- Instructor leads class in building the views listed in the section above. Time may not permit you to get through all of them. -->
         <section>
           <h3>Let's Develop It!</h3>
           <p>Build your own Song/Show view</p>
@@ -177,18 +194,19 @@ end
           <pre><code class="html">
 &lt;h1><%= @song.title %>&lt;/h1>
 
-<p><%= @song.length %> minutes of awesome! Best played at <%= @song.optimal_volume %>. Rated as <%= @song.average_rating %> by people who would know.</p> 
+<p>Best played at <%= @song.optimal_volume %>. Rated as <%= @song.average_rating %> by people who would know.</p> 
           </code></pre>
         </section>
 
         <section>
           <h3>Where Does CSS Go?</h3>
-          <p>Assets!</p>
+          <p>app/assets/stylesheets</p>
+<!-- brief discussion of assets directory if time permits and class is interested-->
         </section>
 
         <section>
           <h3>Summary</h3>
-          <p>Today, we built the controllers and views for our application, including forms to create new songs and ratins, as well as all the necessary routing.</p>
+          <p>Today, we built the controllers and views for our application, including forms to create new songs and ratings, as well as all the necessary routing.</p>
 
           <p>App code available <a href="https://github.com/cherimarie/bestsong" alt="github repo">on Github</a>.</p>
         </section>
