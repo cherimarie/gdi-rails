@@ -3,7 +3,7 @@ This is an Intro to Rails course, intended for eventual inclusion in the Girl De
 
 The course is meant to be taught in four two-hour workshops. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
-Cheri's slides can be viewed [here](http://cherimarie.github.io/gdi-core-rails/#/).
+Slides can be viewed at http://gdibtv.github.io/gdi-core-rails/#/
 
 ## Promotional Blurb
 Ready to build on your basic Ruby knowledge to start building full web applications? It's time to learn Rails! 
