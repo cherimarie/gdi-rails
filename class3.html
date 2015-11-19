@@ -23,7 +23,7 @@
     <!-- dark editor--><link rel="stylesheet" href="reveal.js/lib/css/dark.css">
 
     <!-- If use the PDF print sheet so students can print slides-->
-    
+
     <link rel="stylesheet" href="reveal.js/css/print/pdf.css" type="text/css" media="print">
 
     <!--[if lt IE 9]>
@@ -43,22 +43,8 @@
           <h3>Intro to Rails</h3>
           <p>slides: http://cherimarie.github.io/gdi-rails</p>
         </section>
-        
+
   <!-- Intro -->
-        <section>
-          <h3>Welcome!</h3>
-          <div class = "left-align">
-          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-          <p class ="green">Some "rules"</p>
-          <ul>
-            <li>We are here for you!</li>
-            <li>Every question is important</li>
-            <li>Help each other</li>
-            <li>Have fun</li>
-          </ul>
-          </div>
-        </section>
-        
         <section>
           <h3>What we will cover today</h3>
           <ul>
@@ -67,12 +53,13 @@
             <li>Routes</li>
             <li>Views</li>
           </ul>
+          <p>We will talk about Ratings, but focus on code for Artists and Songs only.</p>
         </section>
 
         <section>
           <h3>Homework Review</h3>
           <h5>Rails Console</h5>
-          <p>Questions?</p>
+          <p>Did everyone create lots of objects?</p>
         </section>
 
         <section>
@@ -88,7 +75,7 @@
         </section>
 
         <section>
-          <h3>BestSong Controllers</h3>
+          <h3>Pop Weasel Controllers</h3>
           <br>
           <table>
             <tr>
@@ -101,7 +88,7 @@
                 <td>Show</td>
             </tr>
             <tr>
-                <td>Songs</td>               
+                <td>Songs</td>
                 <td>New</td>
                 <td>Create</td>
                 <td>Show</td>
@@ -118,30 +105,13 @@
           <h3>Building Controllers</h3>
           <p>Let's work together to build the Artists, Songs, and Ratings controllers. Start with running the generate commands in the terminal: </p>
           <pre><code>
-$ rails generate controller Artists 
+$ rails generate controller Artists
 $ rails generate controller Songs
-$ rails generate controller Ratings            
+$ rails generate controller Ratings
           </code></pre>
         </section>
-<!-- Instructor leads class in building Artists, Songs, & Ratings controllers, with the actions listed in the previous section. Leave Ratings#new for the section below. -->
+<!-- Instructor leads class in building Artists, Songs, & Ratings controllers, with the actions listed in the previous section defined but with no content. -->
 
-        <section>
-          <h3>Let's Develop It!</h3>
-          <p>Build your own Rating#new controller method. It will need to create a new Rating and assign it to an instance variable, then find the song and artist by params, and assign them to instance variables. </p>
-        </section>
-
-        <section>
-          <h3>Let's Develop It!</h3>
-          <pre><code class="ruby">
-# in app/controllers/ratings_controller.rb
-
-def new
-  @rating = Rating.new
-  @song = Song.find(params[:song_id])
-  @artist = Artist.find(params[:artist_id])
-end 
-          </code></pre>
-        </section>
 
   <!-- Routing -->
         <section>
@@ -164,7 +134,7 @@ end
         </section>
 
         <section>
-          <h3>BestSong Views</h3>
+          <h3>Pop Weasel Views</h3>
           <ul>
             <li style="border-bottom: 2px solid skyblue;">Model/View</li>
             <li>Layouts/Application</li>
@@ -180,13 +150,13 @@ end
 
         <section>
           <h3>Building Views</h3>
-          <p>Let's work together to build the Artists, Songs, and Ratings views.</p>
+          <p>Let's work together to build the Artist Index and Show views.</p>
         </section>
 
 <!-- Instructor leads class in building the views listed in the section above. Time may not permit you to get through all of them. -->
         <section>
           <h3>Let's Develop It!</h3>
-          <p>Build your own Song/Show view</p>
+          <p>Build your own Song Show view</p>
         </section>
 
         <section>
@@ -194,7 +164,7 @@ end
           <pre><code class="html">
 &lt;h1><%= @song.title %>&lt;/h1>
 
-<p>Best played at <%= @song.optimal_volume %>. Rated as <%= @song.average_rating %> by people who would know.</p> 
+<p>From the album: <%= @song.album %>.</p>
           </code></pre>
         </section>
 
@@ -206,16 +176,16 @@ end
 
         <section>
           <h3>Summary</h3>
-          <p>Today, we built the controllers and views for our application, including forms to create new songs and ratings, as well as all the necessary routing.</p>
+          <p>Today, we built the controllers and views for our application, including forms to create new songs, as well as all the necessary routing.</p>
 
-          <p>App code available <a href="https://github.com/cherimarie/bestsong" alt="github repo">on Github</a>.</p>
+          <p>App code available <a href="https://github.com/cherimarie/pop_weasel" alt="github repo">on Github</a>.</p>
         </section>
 
         <section>
           <h3>Questions</h3>
           <p>?</p>
         </section>
-        
+
         <section>
           <h3>Homework</h3>
           <p>Ensure that you have an account set up on Heroku.com.</p>
@@ -223,7 +193,7 @@ end
         </section>
 
 
-       
+
       </div>
       <footer>
         <div class="copyright">
